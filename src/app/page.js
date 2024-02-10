@@ -45,7 +45,7 @@ export default async function Index() {
                 <div className="row justify-center">
 
                 {projects.map((project)=> (
-                       <ProjectCard project={project} key={project.data.id} />
+                      <ProjectCard project={project} key={project} />
                    ))}               
                 </div>
               </div>

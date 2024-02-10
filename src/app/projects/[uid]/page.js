@@ -57,7 +57,7 @@ export async function generateMetadata({ params }) {
     .catch(() => notFound());
 
   return {
-    title: page.data.meta_title,
+    title: page.data.meta_title + " - Enis Miftari",
     description: page.data.meta_description,
   };
 }
