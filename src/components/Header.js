@@ -8,8 +8,7 @@ import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { useRouter } from "next/router";
-
+import { usePathname } from "next/navigation";
 const Profile = ({ name, description, profilePicture }) => {
   return (
     <div className="px-4">
@@ -22,13 +21,13 @@ const Profile = ({ name, description, profilePicture }) => {
                 fill={true}
                 sizes="100vw"
                 className="object-cover"
-              />
-            )}
+                />
+                )}
           </div>
         </PrismicNextLink>
         {(prismic.isFilled.richText(name) ||
           prismic.isFilled.richText(description)) && (
-          <div className="grid grid-cols-1 gap-2 text-center">
+            <div className="grid grid-cols-1 gap-2 text-center">
             {prismic.isFilled.richText(name) && (
               <Heading>
                 <PrismicNextLink href="/">
@@ -51,17 +50,19 @@ const Profile = ({ name, description, profilePicture }) => {
 const NavItem = ({ children }) => {
   return (
     <li className="font-semibold tracking-tight text-slate-800">{children}</li>
-  );
-};
+    );
+  };
+  
+  export const Header = ({
+    withDivider = true,
+    withProfile = true,
+    navigation,
+    settings,
+  }) => {
 
-export const Header = ({
-  withDivider = true,
-  withProfile = true,
-  navigation,
-  settings,
-}) => {
-  return (
-    <div className="bg-gray-300 dark:bg-gray-900">
+    const pathname = usePathname()
+    return (
+      <div className="bg-gray-300 dark:bg-gray-900">
       <div className="container">
         <div className="row">
           <ThemeSwitcher />
@@ -136,37 +137,55 @@ export const Header = ({
                 </div>
               </Link>
             </AnimationOnScroll>
-            </div>
-            </div>
-            <div className="row justify-center py-20">
-              <div className="lg:col-6">
-                <AnimationOnScroll
-                  animateIn="animate__fadeIn"
-                  animateOut="animate__fadeOut"
-                >
-                <div className="bg-white dark:bg-yellow-500 py-3 px-5 rounded-2xl">
-                  <div className="row g-0 text-center">
-                    {navigation.data?.links.map((item) => (
-                      <div
-                        className="col-6 rounded-2xl bg-transparent group hover:bg-gray-900 transition-all ease-in-out duration-500"
-                        key={prismic.asText(item.label)}
-                      >
-                        <PrismicNextLink field={item.link} legacyBehavior>
-                          <a
-                          className="text-gray-900 block rounded-2xl py-5 text-2xl group-hover:text-white"
-                        >
-
-                          <PrismicText field={item.label} />
-                        </a>
-                        </PrismicNextLink>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                </AnimationOnScroll>
-              </div>
-            </div>
           </div>
         </div>
+        <div className="row justify-center py-20">
+          <div className="lg:col-6">
+            <AnimationOnScroll
+              animateIn="animate__fadeIn"
+              animateOut="animate__fadeOut"
+            >
+              <div className="bg-white dark:bg-yellow-500 py-3 px-5 rounded-2xl">
+                <div className="row g-0 text-center">
+                  <div
+                    className={`col-6 rounded-2xl bg-transparent group hover:bg-gray-900 ${
+                      pathname == "/about" ? "bg-gray-900" : "bg-transparent"
+                    }  transition-all ease-in-out duration-500`}
+                   >
+                    <Link href="/about" legacyBehavior>
+                      <a
+                        className={`${
+                          pathname == "/about" ? "text-white bg-gray-900" : ""
+                        } text-gray-900 block rounded-2xl py-5 text-2xl group-hover:text-white`}
+                      >
+                        About
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className={`col-6 rounded-2xl bg-transparent group hover:bg-gray-900 ${
+                      pathname == "/contact"
+                        ? "bg-gray-900"
+                        : "bg-transparent"
+                    }  transition-all ease-in-out duration-500`}
+                  >
+                    <Link href="/contact" legacyBehavior>
+                      <a
+                        className={`${
+                          pathname == "/contact" ? "text-white bg-gray-900" : ""
+                        } 
+                          text-gray-900 block py-5 text-2xl rounded-2xl group-hover:text-white`}
+                      >
+                        Contact
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </AnimationOnScroll>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
