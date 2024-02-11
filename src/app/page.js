@@ -1,5 +1,6 @@
 import * as prismic from "@prismicio/client";
 
+import SVG from "react-inlinesvg";
 import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
 import { Bounded } from "@/components/Bounded";
@@ -26,10 +27,10 @@ export default async function Index() {
   });
   const projects = await client.getAllByType("project", {
     orderings: [
-      {field: "my.article.publishDate", direction: "desc"},
-      {field: "document.first_publication_date", direction: "desc"},
+      { field: "my.article.publishDate", direction: "desc" },
+      { field: "document.first_publication_date", direction: "desc" },
     ],
-  })
+  });
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
   return (
@@ -38,20 +39,27 @@ export default async function Index() {
       navigation={navigation}
       settings={settings}
     >
-        <div className="bg-gray-300 dark:bg-gray-900">
-          <div className="container py-20">
-            <div className="row justify-center">
-              <div className="lg:col-8">
-                <div className="row justify-center">
-
-                {projects.map((project)=> (
-                      <ProjectCard project={project} key={project} />
-                   ))}               
+      <div className="bg-gray-300 dark:bg-gray-900">
+        <div className="container py-20">
+          <div className="row justify-center">
+            <div className="lg:col-8">
+              <div className="row justify-center">
+                {projects.map((project) => (
+                  <ProjectCard project={project} key={project} />
+                ))}
+                <div className="col-12 text-center">
+                  <button className="mt-9">
+                    <SVG
+                      src="/svg/arrow-up.svg"
+                      className="w-14 h-14  fill-current text-gray-900 dark:text-white"
+                    />
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </Layout>
   );
 }
