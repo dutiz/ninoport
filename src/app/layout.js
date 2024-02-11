@@ -14,7 +14,7 @@ const poppins = Poppins({
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="en" className={poppins.className}>
+      <html lang="en" className={`${poppins.variable} font-sans`}>
         <body className="overflow-x-hidden antialiased">
           <main>
             <Providers>
