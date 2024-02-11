@@ -1,3 +1,5 @@
+const config = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -6,12 +8,26 @@ module.exports = {
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      sans: "var(--font-poppins)",
-      serif:
-        'var(--libre-baskerville), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+   extend: {
+      container: {
+        center: true,
+        padding: '1rem',
+      },
+      fontFamily: {
+        sans: ['var(--font-poppins)', ...config.fontFamily.sans],
+      },
+      colors: {
+        gray: {
+          ...config.colors.gray,
+          200: '#F4F4F4',
+          300: '#DCDFE0',
+          500: '#DCDFE0',
+          700: '#151414',
+          800: '#3D3D3D',
+          900: '#0C151D',
+        },
+      },
     },
-    extend: {},
   },
   corePlugins: {
     container: false,
