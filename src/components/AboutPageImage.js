@@ -9,8 +9,8 @@ export default function AboutPageImage() {
       <AnimationOnScroll animateIn="animate__fadeIn">
         <Image
           src="/img/nino-large.png"
-          width={421}
-          height={535}
+          width={400}
+          height={500}
           className="w-full h-auto"
           alt="nino-large"
         />
