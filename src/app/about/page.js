@@ -4,6 +4,7 @@ import AboutPageImage from "@/components/AboutPageImage";
 import AboutPageText from "@/components/AboutPageText";
 import AboutSliderSection from "@/components/AboutSliderSection";
 import Link from "next/link";
+import AboutServiceSection from "@/components/AboutServiceSection";
 
 export default async function About() {
   const client = createClient();
@@ -29,6 +30,7 @@ export default async function About() {
             <div className="row justify-center items-center my-10">
               <AboutPageImage />
               <AboutPageText />
+              <AboutServiceSection/>
             </div>
             <AboutSliderSection />
           </div>
