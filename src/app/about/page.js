@@ -3,6 +3,7 @@ import { createClient } from "@/prismicio";
 import AboutPageImage from "@/components/AboutPageImage";
 import AboutPageText from "@/components/AboutPageText";
 import AboutSliderSection from "@/components/AboutSliderSection";
+import Link from "next/link";
 
 export default async function About() {
   const client = createClient();
@@ -19,9 +20,11 @@ export default async function About() {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <h1 className="my-20 inline-block px-14 py-2 text-black dark:text-white text-4xl border border-yellow-500 rounded-2xl">
+              <Link href="/about/experience" legacyBehavior>
+              <a className="my-20 inline-block px-14 py-2 text-black dark:text-white text-4xl border border-yellow-500 rounded-2xl">
                 Experience
-              </h1>
+              </a>
+              </Link>
             </div>
             <div className="row justify-center items-center my-10">
               <AboutPageImage />
