@@ -8,23 +8,25 @@ module.exports = {
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-   extend: {
+    extend: {
       container: {
         center: true,
-        padding: '1rem',
+        padding: "1rem",
       },
       fontFamily: {
-        sans: ['var(--font-poppins)', ...config.fontFamily.sans],
+        fontFamily: {
+          sans: ["var(--font-poppins)", ...config.fontFamily.sans],
+        },
       },
       colors: {
         gray: {
           ...config.colors.gray,
-          200: '#F4F4F4',
-          300: '#DCDFE0',
-          500: '#DCDFE0',
-          700: '#151414',
-          800: '#3D3D3D',
-          900: '#0C151D',
+          200: "#F4F4F4",
+          300: "#DCDFE0",
+          500: "#DCDFE0",
+          700: "#151414",
+          800: "#3D3D3D",
+          900: "#0C151D",
         },
       },
     },
