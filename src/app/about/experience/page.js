@@ -1,5 +1,6 @@
 import { createClient } from "@/prismicio";
 import { Layout } from "@/components/Layout";
+import AboutSliderSection from "@/components/AboutSliderSection";
 
 export default async function Experience() {
   const client = createClient();
@@ -40,6 +41,9 @@ export default async function Experience() {
                   </p>
                 </div>
               </div>
+            </div>
+            <div className="col-12 mt-32">
+                <AboutSliderSection />
             </div>
           </div>
         </div>
