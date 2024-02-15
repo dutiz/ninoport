@@ -6,7 +6,7 @@
       <div className="container py-20">
         <div className="row">
           <div className="col-12">
-            <p className="text-black dark:text-white text-center text-l">
+            <p className="text-black dark:text-white text-center text-xl md:text-4xl">
               &copy; Enis Miftari, {new Date().getFullYear()} All Rights
               Reserved
             </p>
