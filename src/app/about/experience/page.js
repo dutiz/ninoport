@@ -31,13 +31,10 @@ export default async function Experience() {
               <div className="row justify-center mt-20">
                 <div className="col-10">
                   <p className="md:text-4xl text-2xl text-black dark:text-white">
-                    Lorem ipsum dolor sit amet consectetur. Semper nisl egestas
-                    proin rhoncus sagittis aliquet tincidunt. Pharetra fusce
-                    tristique morbi sed orci velit massa cursus. Suspendisse sed
-                    morbi eget scelerisque leo ultricies a. Sed eros orci ac
-                    accumsan viverra risus nulla. Vestibulum leo pharetra dui
-                    ullamcorper vestibulum velit in eu. Et pellentesque morbi
-                    amet
+                    LuckyMedia was one of the first internships that i made when i was studying.
+                    In this company i started to learn Front End with the technologies:
+                    HTML5, CSS3, Javascript.After learning these technologies i started to learn the frameworks 
+                    ReactJS, NextJS and also TailwindCSS.
                   </p>
                 </div>
               </div>

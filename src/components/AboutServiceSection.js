@@ -1,5 +1,5 @@
-import React from 'react'
-import { AboutServiceCard } from './AboutServiceCard'
+import React from "react";
+import { AboutServiceCard } from "./AboutServiceCard";
 
 export default function AboutServiceSection() {
   return (
@@ -8,13 +8,13 @@ export default function AboutServiceSection() {
         <div className="col-10">
           <div className="row">
             <AboutServiceCard img="project.png" title="Branding">
-              Landing page of SmarterTrading411 created using wordPress
+              Crafting desings for various brandings
             </AboutServiceCard>
             <AboutServiceCard img="project.png" title="UX/UI">
-              Landing page of SmarterTrading411 created using wordPress
+              Web & Mobile Designs
             </AboutServiceCard>
             <AboutServiceCard img="project.png" title="Front End">
-              Landing page of SmarterTrading411 created using wordPress
+              Bringing design to life with code
             </AboutServiceCard>
           </div>
         </div>
