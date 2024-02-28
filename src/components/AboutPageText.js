@@ -4,9 +4,9 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 export default function AboutPageText() {
   return (
-    <div className="md:col-7">
+    <div className="md:col-7 text-center lg:text-start">
       <AnimationOnScroll animateIn="animate__fadeIn">
-        <h1 className="mt-10 lg:text-5xl text-3xl font-bold text-black dark:text-white">
+        <h1 className="mt-10 lg:mt-0 lg:text-5xl text-3xl font-bold text-black dark:text-white">
           UX/UI Designer
         </h1>
         <p className="mt-10 text-gray-800 dark:text-white lg:text-xl text-xl">
