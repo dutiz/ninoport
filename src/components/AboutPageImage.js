@@ -10,7 +10,7 @@ export default function AboutPageImage() {
         <Image
           src="/img/nino-large.png"
           width={400}
-          height={500}
+          height={400}
           className="w-full h-auto"
           alt="nino-large"
         />
