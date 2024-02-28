@@ -84,11 +84,11 @@ export const Header = ({
                     />
                   </Link>
                 </div>
-                <div className="lg:col-6 text-center mt-10 lg:mt-0">
-                  <h1 className="text-black text-start dark:text-white font-bold text-4xl">
+                <div className="lg:col-6 text-center lg:text-start mt-10 lg:mt-0">
+                  <h1 className="text-black dark:text-white font-bold text-4xl">
                     Enis Miftari
                   </h1>
-                  <p className="mt-5 text-black text-start dark:text-white text-2xl">
+                  <p className="mt-5 text-black dark:text-white text-2xl">
                     UX / UI Designer
                   </p>
                   <div className="inline-flex items-center space-x-9">
