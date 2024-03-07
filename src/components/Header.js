@@ -80,7 +80,7 @@ export const Header = ({
                       width={220}
                       height={220}
                       alt="enisprofile"
-                      className="mx-auto rounded-full border-4 border-yellow-500"
+                      className="mx-auto rounded-full border-4 pt-3 bg-white border-yellow-500"
                     />
                   </Link>
                 </div>
