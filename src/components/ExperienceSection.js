@@ -77,13 +77,13 @@ export default function ExperienceSection() {
             className="mySwiper"
           >
             {isBridge ? (
-                // Bridge Slider
+              // Bridge Slider
               <>
                 <SwiperSlide>
                   <SVG src="/svg/figma-svg.svg" className="mx-auto" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <SVG src="/svg/react-svg.svg" className="mx-auto" />
+                  <SVG src="/svg/vuejs.svg" className="mx-auto" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <SVG src="/svg/ae-svg.svg" className="mx-auto" />
@@ -93,10 +93,13 @@ export default function ExperienceSection() {
                 </SwiperSlide>
                 <SwiperSlide>
                   <SVG src="/svg/technology-1.svg" className="mx-auto" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SVG src="/svg/swift-logo.svg" className="mx-auto" />
                 </SwiperSlide>
               </>
             ) : (
-                // Lucky Slider
+              // Lucky Slider
               <>
                 <SwiperSlide>
                   <SVG src="/svg/figma-svg.svg" className="mx-auto" />
@@ -105,13 +108,22 @@ export default function ExperienceSection() {
                   <SVG src="/svg/react-svg.svg" className="mx-auto" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <SVG src="/svg/ae-svg.svg" className="mx-auto" />
+                  <SVG src="/svg/tailwindcss-svg.svg" className="mx-auto" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <SVG src="/svg/js-svg.svg" className="mx-auto" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <SVG src="/svg/technology-1.svg" className="mx-auto" />
+                  <SVG
+                    src="/svg/github-logo.svg"
+                    className="mx-auto fill-current dark:text-white text-black"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <SVG
+                    src="/svg/next-svg.svg"
+                    className="fill-current dark:text-white text-black mx-auto"
+                  />
                 </SwiperSlide>
               </>
             )}
