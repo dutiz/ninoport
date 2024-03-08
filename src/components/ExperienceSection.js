@@ -32,11 +32,14 @@ export default function ExperienceSection() {
         <div className="col-10">
           {isBridge ? (
             <p className="md:text-4xl text-2xl text-black dark:text-white">
-              Bridge Technology was one of the first internships that i made
-              when i was studying. In this company i started to learn Front End
-              with the technologies: HTML5, CSS3, Javascript.After learning
-              these technologies i started to learn the frameworks ReactJS,
-              NextJS and also TailwindCSS.
+              Bridge Technologies was the first company where i was introduced
+              to bigger systems and also had the opportunity to learn many
+              fields of programming. Firstly learned about mobile programming
+              with the most famous mobile programming language Swift and
+              SwiftUI.Continued with front-end development with the framework
+              VueJs and Bootstrap and also had the opportunity working on 3 big
+              projects. On this projects also learned about backend with PHP
+              with the framework Laravel.
             </p>
           ) : (
             <p className="md:text-4xl text-2xl text-black dark:text-white">
