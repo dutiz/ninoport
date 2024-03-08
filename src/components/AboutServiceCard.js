@@ -3,6 +3,7 @@
 // import SVG from "react-inlinesvg";
 import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Link from 'next/link'
 
 export function AboutServiceCard({ img }) {
   return (
@@ -11,7 +12,15 @@ export function AboutServiceCard({ img }) {
         animateIn="animate__fadeIn"
         animateOut="animate__fadeOut"
       >
-        <Image src={`/img/${img}`} width={362} height={226} className="rounded-[10px] w-full h-auto" alt={img} />
+        <Link href="/contact">
+          <Image
+            src={`/img/${img}`}
+            width={362}
+            height={226}
+            className="rounded-[10px] w-full h-auto"
+            alt={img}
+          />
+        </Link>
         {/* <div
           style={{
             background: `url('/img/${img}') no-repeat center center / cover`,
