@@ -1,16 +1,18 @@
 "use client";
 
-import SVG from "react-inlinesvg";
+// import SVG from "react-inlinesvg";
+import Image from "next/image";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-export function AboutServiceCard({ img, title, children }) {
+export function AboutServiceCard({ img }) {
   return (
     <div className="lg:col-4 mb-8">
       <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOut="animate__fadeOut"
       >
-        <div
+        <Image src={`/img/${img}`} width={362} height={226} className="rounded-[10px] w-full h-auto" alt={img} />
+        {/* <div
           style={{
             background: `url('/img/${img}') no-repeat center center / cover`,
             height: "300px",
@@ -28,8 +30,8 @@ export function AboutServiceCard({ img, title, children }) {
               src="/svg/link-svg.svg"
               className="mt-4 w-9 h-9 opacity-0 group-hover:opacity-100 fill-current mx-auto"
             />
-          </div>
-        </div>
+          </div> 
+        </div>*/}
       </AnimationOnScroll>
     </div>
   );
