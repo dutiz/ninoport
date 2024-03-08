@@ -153,13 +153,13 @@ export const Header = ({
                   <div
                     className={`col-6 rounded-2xl bg-transparent group hover:bg-gray-900 ${
                       pathname == "/about" ? "bg-gray-900" : "bg-transparent"
-                    }  transition-all ease-in-out duration-500`}
+                    }  uppercase transition-all ease-in-out duration-500`}
                   >
                     <Link href="/about" legacyBehavior>
                       <a
                         className={`${
                           pathname == "/about" ? "text-white bg-gray-900" : ""
-                        } text-gray-900 block rounded-2xl py-5 text-2xl group-hover:text-white`}
+                        } text-gray-900 block uppercase rounded-2xl py-5 text-2xl group-hover:text-white`}
                       >
                         About
                       </a>
@@ -168,7 +168,7 @@ export const Header = ({
                   <div
                     className={`col-6 rounded-2xl bg-transparent group hover:bg-gray-900 ${
                       pathname == "/contact" ? "bg-gray-900" : "bg-transparent"
-                    }  transition-all ease-in-out duration-500`}
+                    }  transition-all uppercase ease-in-out duration-500`}
                   >
                     <Link href="/contact" legacyBehavior>
                       <a
