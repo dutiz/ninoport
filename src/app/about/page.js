@@ -21,16 +21,30 @@ export default async function About() {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
-              <Link href="/about/experience" legacyBehavior>
-              <a className="my-20 inline-block px-14 py-2 text-black dark:text-white text-4xl border border-yellow-500 rounded-2xl">
-                Experience
-              </a>
-              </Link>
+              <div className="row">
+                <div className="lg:col-6">
+                  <Link href="/about/experience" legacyBehavior>
+                    <a className="my-20 inline-block px-14 py-2 uppercase text-black dark:text-white text-4xl border border-yellow-500 rounded-2xl">
+                      Experience
+                    </a>
+                  </Link>
+                </div>
+                <div className="lg:col-6">
+                  <Link href="/" legacyBehavior>
+                    <a className="my-20 inline-block px-14 py-2 uppercase text-black dark:text-white text-4xl border border-yellow-500 rounded-2xl">
+                      Projects
+                    </a>
+                  </Link>
+                </div>
+              </div>
             </div>
             <div className="row justify-center items-center my-10">
               <AboutPageImage />
               <AboutPageText />
-              <AboutServiceSection/>
+              <AboutServiceSection />
+              <h2 className="text-3xl dark:text-white text-black text-center font-bold uppercase">
+                Tech Stack
+              </h2>
             </div>
             <AboutSliderSection />
           </div>
