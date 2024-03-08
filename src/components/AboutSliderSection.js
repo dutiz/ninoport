@@ -41,13 +41,22 @@ export default function AboutSliderSection() {
             <SVG src="/svg/react-svg.svg" className="mx-auto" />
           </SwiperSlide>
           <SwiperSlide>
+            <SVG src="/svg/next-svg.svg" className="fill-current dark:text-white text-black mx-auto" />
+          </SwiperSlide>
+          <SwiperSlide>
             <SVG src="/svg/ae-svg.svg" className="mx-auto" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SVG src="/svg/tailwindcss-svg.svg" className="mx-auto" />
           </SwiperSlide>
           <SwiperSlide>
             <SVG src="/svg/js-svg.svg" className="mx-auto" />
           </SwiperSlide>
           <SwiperSlide>
             <SVG src="/svg/technology-1.svg" className="mx-auto" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SVG src="/svg/github-logo.svg" className="fill-current dark:text-white text-black mx-auto" />
           </SwiperSlide>
         </Swiper>
       </div>
