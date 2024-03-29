@@ -151,7 +151,22 @@ export const Header = ({
               <div className="bg-white dark:bg-yellow-500 py-3 px-5 rounded-2xl">
                 <div className="row g-0 text-center">
                   <div
-                    className={`col-6 rounded-2xl bg-transparent group hover:bg-gray-900 ${
+                    className={`col-4 rounded-2xl bg-transparent group hover:bg-gray-900 ${
+                      pathname == "/" ? "bg-gray-900" : "bg-transparent"
+                    }  uppercase transition-all ease-in-out duration-500`}
+                  >
+                    <Link href="/" legacyBehavior>
+                      <a
+                        className={`${
+                          pathname == "/" ? "text-white bg-gray-900" : ""
+                        } text-gray-900 block uppercase rounded-2xl py-5 md:text-2xl text-base group-hover:text-white`}
+                      >
+                        Home
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    className={`col-4 rounded-2xl bg-transparent group hover:bg-gray-900 ${
                       pathname == "/about" ? "bg-gray-900" : "bg-transparent"
                     }  uppercase transition-all ease-in-out duration-500`}
                   >
@@ -159,14 +174,14 @@ export const Header = ({
                       <a
                         className={`${
                           pathname == "/about" ? "text-white bg-gray-900" : ""
-                        } text-gray-900 block uppercase rounded-2xl py-5 text-2xl group-hover:text-white`}
+                        } text-gray-900 block uppercase rounded-2xl py-5 md:text-2xl text-base group-hover:text-white`}
                       >
                         About
                       </a>
                     </Link>
                   </div>
                   <div
-                    className={`col-6 rounded-2xl bg-transparent group hover:bg-gray-900 ${
+                    className={`col-4 rounded-2xl bg-transparent group hover:bg-gray-900 ${
                       pathname == "/contact" ? "bg-gray-900" : "bg-transparent"
                     }  transition-all uppercase ease-in-out duration-500`}
                   >
@@ -175,7 +190,7 @@ export const Header = ({
                         className={`${
                           pathname == "/contact" ? "text-white bg-gray-900" : ""
                         } 
-                          text-gray-900 block py-5 text-2xl rounded-2xl group-hover:text-white`}
+                          text-gray-900 block py-5 md:text-2xl text-base rounded-2xl group-hover:text-white`}
                       >
                         Contact
                       </a>
