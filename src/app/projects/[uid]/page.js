@@ -26,10 +26,10 @@ export default async function Page({ params }) {
             <div className="col-12 p-14 border-2 text-center text-black dark:text-white border-black dark:border-yellow-500">
               <div className="row justify-center">
                 <div className="md:col-9">
-                  <h1 className="text-6xl">
+                  <h1 className="md:text-6xl text-3xl">
                     <PrismicText field={page.data.title} />
                   </h1>
-                  <p className="text-3xl mt-5">
+                  <p className="md:text-3xl text-lg mt-5">
                     <SliceZone
                       slices={page.data.slices}
                       components={components}
@@ -39,7 +39,7 @@ export default async function Page({ params }) {
               </div>
               <div className="row mt-10 justify-center">
                 <div className="md:col-8">
-                  <SliderComponent images={page.data.slider}/>
+                  <SliderComponent images={page.data.slider} />
                 </div>
               </div>
             </div>
