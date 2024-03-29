@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -7,7 +7,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-export default function SliderComponent({images}) {
+export default function SliderComponent({ images }) {
   return (
     <Swiper
       spaceBetween={30}
@@ -26,7 +26,7 @@ export default function SliderComponent({images}) {
         <SwiperSlide key={element}>
           <PrismicNextImage
             field={element.sliderimg}
-            className="w-full h-[500px] object-cover mx-auto"
+            className="w-full md:h-[500px] h-auto object-cover mx-auto"
             alt={element.sliderimg.alt}
           />
         </SwiperSlide>
